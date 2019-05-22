@@ -2,6 +2,8 @@ version: 0.2
 # GitHub -> CodeBuild -> S3 -> CloudFront
 phases:
   install:
+    runtime-versions:
+      nodejs: 10
     commands:
       - echo update npm...
       - npm install -g n
