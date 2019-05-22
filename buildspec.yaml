@@ -25,7 +25,7 @@ phases:
   post_build:
     commands:
       - echo Delete S3 Bucket object...
-      - aws s3 rm s3://${S3_BUCKET_NAME} --recursive
+      - aws s3 rm s3://levena-codebuild-test --recursive
       # - echo create invalidation 
       # - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
 artifacts:
