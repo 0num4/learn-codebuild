@@ -28,6 +28,9 @@ phases:
       - aws s3 rm s3://levena-codebuild-test --recursive
       # - echo create invalidation 
       # - aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*'
+cache:
+  paths:
+    - 'node_modules/**/*'
 artifacts:
   files:
     - '**/*'
